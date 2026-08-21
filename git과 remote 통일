@@ -1,0 +1,509 @@
+
+acorn@BOOK-LV8H9P5LMC MINGW64 ~
+$ pwd
+/c/Users/acorn
+
+acorn@BOOK-LV8H9P5LMC MINGW64 ~
+$ cd c:/works
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works
+$ ls
+projects/
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works
+$ mkdir git_tutor
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works
+$ cd git_tutor
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor
+$ pwd
+/c/works/git_tutor
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor
+$ ls -al
+total 4
+drwxr-xr-x 1 acorn 197121 0 Aug 21 09:57 ./
+drwxr-xr-x 1 acorn 197121 0 Aug 21 09:57 ../
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor
+$ git init
+Initialized empty Git repository in C:/works/git_tutor/.git/
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ echo '# study' >> README.md
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ ls
+README.md
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ cat README.md
+# study
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git commit -m 'first commit'
+[main (root-commit) 407678a] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git log
+commit 407678a1de586190fad62b561349d8d9a5d0bd89 (HEAD -> main)
+Author: yjm <yoojimin0716@gachon.ac.kr>
+Date:   Fri Aug 21 10:02:07 2026 +0900
+
+    first commit
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git remote add origin https://github.com/yoojimin0716-hue/study.git
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git remote -v
+origin  https://github.com/yoojimin0716-hue/study.git (fetch)
+origin  https://github.com/yoojimin0716-hue/study.git (push)
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ ls
+README.md
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git push -u origin main
+info: please complete authentication in your browser...
+
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 218 bytes | 218.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/yoojimin0716-hue/study.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ ls
+README.md
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git remote rm origin
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git remote -v
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git remote add origin https://github.com/yoojimin0716-hue/study.git
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git remote -v
+origin  https://github.com/yoojimin0716-hue/study.git (fetch)
+origin  https://github.com/yoojimin0716-hue/study.git (push)
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git log
+commit 407678a1de586190fad62b561349d8d9a5d0bd89 (HEAD -> main)
+Author: yjm <yoojimin0716@gachon.ac.kr>
+Date:   Fri Aug 21 10:02:07 2026 +0900
+
+    first commit
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ vi hello.txt
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git add hello.txt
+warning: in the working copy of 'hello.txt', LF will be replaced by CRLF the next time Git touches it
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git commit -m 'hello commit'
+[main 336511f] hello commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.txt
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 351 bytes | 351.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/yoojimin0716-hue/study.git
+   407678a..336511f  main -> main
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ vi world.txt
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git add world.txt
+warning: in the working copy of 'world.txt', LF will be replaced by CRLF the next time Git touches it
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git commit -m 'world commit'
+[main cc2b195] world commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 world.txt
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 344 bytes | 344.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/yoojimin0716-hue/study.git
+   336511f..cc2b195  main -> main
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ cat world.txt
+'진짜 커피마셨는데 개졸림'
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 974 bytes | 139.00 KiB/s, done.
+From https://github.com/yoojimin0716-hue/study
+   cc2b195..6c19681  main       -> origin/main
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git branch -a
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git log main..origin/main
+commit 6c196814ea43db4fe58eef36630bd8ab03cf7c72 (origin/main, origin/HEAD)
+Author: yoojimin0716-hue <yoojimin0716@gachon.ac.kr>
+Date:   Fri Aug 21 10:51:47 2026 +0900
+
+    Add additional lines to world.txt
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git merge origin/main
+Updating cc2b195..6c19681
+Fast-forward
+ world.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git commit -a
+On branch main
+nothing to commit, working tree clean
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ cat world.txt
+'진짜 커피마셨는데 개졸림'
+'담배피고싶다'
+
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git push origin main
+Everything up-to-date
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git push origin main
+To https://github.com/yoojimin0716-hue/study.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/yoojimin0716-hue/study.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git merge origin/main
+Already up to date.
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git commit -a
+On branch main
+nothing to commit, working tree clean
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git push origin main
+To https://github.com/yoojimin0716-hue/study.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/yoojimin0716-hue/study.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git fetch
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1017 bytes | 169.00 KiB/s, done.
+From https://github.com/yoojimin0716-hue/study
+   6c19681..62c1b8e  main       -> origin/main
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ cat happy.txt
+cat: happy.txt: No such file or directory
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git add happy.txt
+fatal: pathspec 'happy.txt' did not match any files
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git pull origin main
+From https://github.com/yoojimin0716-hue/study
+ * branch            main       -> FETCH_HEAD
+Updating 6c19681..62c1b8e
+Fast-forward
+ happy.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 happy.txt
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git add happy.txt
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ cat happy.txt
+해피하지 않아
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git push origin/main
+fatal: 'origin/main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git fetch
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git merge -a
+error: unknown switch `a'
+usage: git merge [<options>] [<commit>...]
+   or: git merge --abort
+   or: git merge --continue
+
+    -n                    do not show a diffstat at the end of the merge
+    --[no-]stat           show a diffstat at the end of the merge
+    --[no-]summary        (synonym to --stat)
+    --[no-]compact-summary
+                          show a compact-summary at the end of the merge
+    --[no-]log[=<n>]      add (at most <n>) entries from shortlog to merge commit message
+    --[no-]squash         create a single commit instead of doing a merge
+    --[no-]commit         perform a commit if the merge succeeds (default)
+    -e, --[no-]edit       edit message before committing
+    --[no-]cleanup <mode> how to strip spaces and #comments from message
+    --[no-]ff             allow fast-forward (default)
+    --ff-only             abort if fast-forward is not possible
+    --[no-]rerere-autoupdate
+                          update the index with reused conflict resolution if possible
+    --[no-]verify-signatures
+                          verify that the named commit has a valid GPG signature
+    -s, --[no-]strategy <strategy>
+                          merge strategy to use
+    -X, --[no-]strategy-option <option=value>
+                          option for selected merge strategy
+    -m, --[no-]message <message>
+                          merge commit message (for a non-fast-forward merge)
+    -F, --file <path>     read message from file
+    --[no-]into-name <name>
+                          use <name> instead of the real target
+    -v, --[no-]verbose    be more verbose
+    -q, --[no-]quiet      be more quiet
+    --[no-]abort          abort the current in-progress merge
+    --[no-]quit           --abort but leave index and working tree alone
+    --[no-]continue       continue the current in-progress merge
+    --[no-]allow-unrelated-histories
+                          allow merging unrelated histories
+    --[no-]progress       force progress reporting
+    -S, --[no-]gpg-sign[=<key-id>]
+                          GPG sign commit
+    --[no-]autostash      automatically stash/stash pop before and after
+    --[no-]overwrite-ignore
+                          update ignored files (default)
+    --[no-]signoff        add a Signed-off-by trailer
+    --no-verify           bypass pre-merge-commit and commit-msg hooks
+    --verify              opposite of --no-verify
+
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ https://github.com/yoojimin0716-hue/study.git
+bash: https://github.com/yoojimin0716-hue/study.git: No such file or directory
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ cat happy.txt
+해피하지 않아
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ ls
+README.md  happy.txt  hello.txt  world.txt
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ https://github.com/yoojimin0716-hue/study.git
+bash: https://github.com/yoojimin0716-hue/study.git: No such file or directory
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git pull origin main
+From https://github.com/yoojimin0716-hue/study
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ ls
+README.md  happy.txt  hello.txt  world.txt
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ cat happy.txt
+해피하지 않아
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git rm world.txt
+rm 'world.txt'
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ ls
+README.md  happy.txt  hello.txt
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    world.txt
+
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git commit -m 'delete world.txt'
+[main 6b9bb88] delete world.txt
+ 1 file changed, 3 deletions(-)
+ delete mode 100644 world.txt
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 221 bytes | 221.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/yoojimin0716-hue/study.git
+   62c1b8e..6b9bb88  main -> main
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ ls
+README.md  happy.txt  hello.txt
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ pwd
+/c/works/git_tutor
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_tutor (main)
+$ cd ..
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works
+$ ls
+git_tutor/  projects/
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works
+$ mkdir git_clone
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works
+$ cd git_clone
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_clone
+$ ls -al
+total 4
+drwxr-xr-x 1 acorn 197121 0 Aug 21 11:16 ./
+drwxr-xr-x 1 acorn 197121 0 Aug 21 11:16 ../
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_clone
+$ git init
+Initialized empty Git repository in C:/works/git_clone/.git/
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_clone (main)
+$ git clone https://github.com/yoojimin0716-hue/study.git
+Cloning into 'study'...
+remote: Enumerating objects: 17, done.
+remote: Counting objects: 100% (17/17), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 17 (delta 4), reused 10 (delta 1), pack-reused 0 (from 0)
+Receiving objects: 100% (17/17), done.
+Resolving deltas: 100% (4/4), done.
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_clone (main)
+$ cd study/
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_clone/study (main)
+$ ls -al
+total 7
+drwxr-xr-x 1 acorn 197121  0 Aug 21 11:17 ./
+drwxr-xr-x 1 acorn 197121  0 Aug 21 11:17 ../
+drwxr-xr-x 1 acorn 197121  0 Aug 21 11:17 .git/
+-rw-r--r-- 1 acorn 197121  9 Aug 21 11:17 README.md
+-rw-r--r-- 1 acorn 197121 21 Aug 21 11:17 happy.txt
+-rw-r--r-- 1 acorn 197121 75 Aug 21 11:17 hello.txt
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_clone/study (main)
+$ ^C
+
+acorn@BOOK-LV8H9P5LMC MINGW64 /c/works/git_clone/study (main)
+$
